@@ -62,7 +62,12 @@ const Signup = () => {
 				toast("Registration Successful.");
 				navigate("/");
 			} catch (error) {
-				console.log(error);
+				console.log(error.message);
+				if (error.code === "auth/email-already-in-use") {
+					toast("Email already in use. Please use a different email.");
+				} else {
+					toast("Something went wrong while signing up! Try again.");
+				}
 			} finally {
 				setLoading(false);
 			}

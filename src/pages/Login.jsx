@@ -67,6 +67,21 @@ const Login = () => {
 				navigate("/");
 			} catch (error) {
 				console.log(error);
+				const errorCode = error.code;
+
+				switch (errorCode) {
+					case "auth/invalid-credential":
+						toast("Invalid email/password.");
+						break;
+					case "auth/user-not-found":
+						toast("No user found with this email address.");
+						break;
+					case "auth/wrong-password":
+						toast("Incorrect password. Please try again.");
+						break;
+					default:
+						toast("Something went wrong while login! Try again.");
+				}
 			} finally {
 				setLoading(false);
 			}

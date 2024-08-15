@@ -50,7 +50,6 @@ const AddBreedToFavorite = ({ selectedBreed }) => {
 		try {
 			setLoading(true);
 			const userDocRef = doc(db, "users", user.uid);
-			console.log(userDocRef);
 			await updateDoc(userDocRef, {
 				favoriteBreeds: updatedBreeds,
 			});
@@ -64,8 +63,6 @@ const AddBreedToFavorite = ({ selectedBreed }) => {
 			setLoading(false);
 		}
 	};
-
-	console.log(userFavoritesBreed);
 
 	return (
 		<div
