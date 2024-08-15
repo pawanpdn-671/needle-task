@@ -122,7 +122,7 @@ const Signup = () => {
 							className="absolute cursor-pointer right-3 top-[28px] -translate-y-1/2"
 							onClick={() => setShowPassword((prev) => !prev)}>
 							<img
-								src={showPassword ? "/src/assets/icons/Eye.svg" : "/src/assets/icons/EyeOff.svg"}
+								src={showPassword ? "/assets/icons/Eye.svg" : "/assets/icons/EyeOff.svg"}
 								className="w-[20px]"
 								alt={"show/hide password icon"}
 							/>
@@ -143,7 +143,7 @@ const Signup = () => {
 								"w-full text-base gap-1 items-center disabled:!opacity-100 text-foreground h-auto !py-3"
 							}
 							disabled={loading}>
-							{loading && <img src="src/assets/icons/Hourglass.svg" alt="loading icon" className="w-[18px]" />}
+							{loading && <img src="/assets/icons/Hourglass.svg" alt="loading icon" className="w-[18px]" />}
 							{loading ? "Loading" : "Sign Up"}
 						</Button>
 					</div>

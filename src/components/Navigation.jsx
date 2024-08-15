@@ -86,7 +86,7 @@ const Navigation = () => {
 						</div>
 						<div className="grid gap-4">
 							<p className="flex items-center gap-1 text-base">
-								<img src="/src/assets/icons/Mail.svg" className="w-[20px]" alt="mail icon" />
+								<img src="/assets/icons/Mail.svg" className="w-[20px]" alt="mail icon" />
 								{user?.email}
 							</p>
 							<Button size="sm" variant="destructive" className="gap-1 font-medium" onClick={handleSignout}>

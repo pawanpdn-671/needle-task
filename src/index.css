@@ -4,7 +4,7 @@
 
 @font-face {
 	font-family: "FuturaPTDemi";
-	src: url("webFonts/FuturaPTDemi/font.woff2") format("woff2"), url("webFonts/FuturaPTDemi/font.woff") format("woff");
+	src: url("/webFonts/FuturaPTDemi/font.woff2") format("woff2"), url("/webFonts/FuturaPTDemi/font.woff") format("woff");
 }
 
 @layer base {
