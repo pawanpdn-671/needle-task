@@ -30,14 +30,12 @@ const BreedCard = ({ breed, breedName, canLike }) => {
 			if (userDoc.exists()) {
 				const userData = userDoc.data();
 				let updatedLikedPhotos = [];
+				const likedPhotos = Array.isArray(userData.likedPhotos) ? userData.likedPhotos : [];
 
 				if (liked) {
-					updatedLikedPhotos = userData.likedPhotos.filter((photo) => photo.photoUrl !== breed);
+					updatedLikedPhotos = likedPhotos.filter((photo) => photo.photoUrl !== breed);
 				} else {
-					updatedLikedPhotos = [
-						...userData.likedPhotos,
-						{ photoUrl: breed, breedName, likedAt: currentTimestamp },
-					];
+					updatedLikedPhotos = [...likedPhotos, { photoUrl: breed, breedName, likedAt: currentTimestamp }];
 				}
 
 				await updateDoc(userDocRef, {
